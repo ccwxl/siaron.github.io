@@ -9,7 +9,7 @@
   <title>postgres9.5.7 wal archive and Recovery Configuration | siaron</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="wal归档备份 目录规划1234/mnt2/postgresql_basebak/data #基础备份目录/mnt2/postgresql_recover/data #还原目录/mnt2/postgresql_increase_basebak/ #每个月基础备份目录/mnt2/postgresql_walbak/  #wal日志备份目录">
-<meta name="keywords" content="postgres,wal archive">
+<meta name="keywords" content="postgres">
 <meta property="og:type" content="article">
 <meta property="og:title" content="postgres9.5.7 wal archive and Recovery Configuration">
 <meta property="og:url" content="http://yoursite.com/2017/10/10/postgres-archive/index.html">
@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://github.com/runjava/picture/blob/master/postgresql_wal_timeline/time_line.png?raw=true">
 <meta property="og:image" content="https://github.com/runjava/picture/blob/master/postgresql_wal_timeline/time_line_distribution.png?raw=true">
-<meta property="og:updated_time" content="2017-10-10T13:20:03.000Z">
+<meta property="og:updated_time" content="2017-10-11T01:07:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="postgres9.5.7 wal archive and Recovery Configuration">
 <meta name="twitter:description" content="wal归档备份 目录规划1234/mnt2/postgresql_basebak/data #基础备份目录/mnt2/postgresql_recover/data #还原目录/mnt2/postgresql_increase_basebak/ #每个月基础备份目录/mnt2/postgresql_walbak/  #wal日志备份目录">
@@ -316,10 +316,6 @@ var _hmt = _hmt || [];
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">postgres</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">wal archive</a>
-        		</li>
       		
 		</ul>
 	</div>
@@ -386,6 +382,20 @@ var _hmt = _hmt || [];
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2017/10/11/postgres-replication/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          postgres replication
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -535,10 +545,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">postgres</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">wal archive</a>
               </li>
             
             <div class="clearfix"></div>
