@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>siaron</title>
+  <title>git install config | siaron</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Try to generate more code within these hours...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="siaron">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="最新版git的安装方法 推荐yum update 更新下系统 安装依赖包1yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git install config">
+<meta property="og:url" content="http://yoursite.com/2017/10/12/git-install-config/index.html">
 <meta property="og:site_name" content="siaron">
-<meta property="og:description" content="Try to generate more code within these hours...">
+<meta property="og:description" content="最新版git的安装方法 推荐yum update 更新下系统 安装依赖包1yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-12T01:11:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="siaron">
-<meta name="twitter:description" content="Try to generate more code within these hours...">
+<meta name="twitter:title" content="git install config">
+<meta name="twitter:description" content="最新版git的安装方法 推荐yum update 更新下系统 安装依赖包1yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker">
   
     <link rel="alternative" href="/atom.xml" title="siaron" type="application/atom+xml">
   
@@ -163,16 +165,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-git-install-config" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-git-install-config" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/12/git-install-config/">git install config</a>
+    <h1 class="article-title" itemprop="name">
+      git install config
     </h1>
   
 
@@ -187,11 +187,53 @@ var _hmt = _hmt || [];
       
         <h3 id="最新版git的安装方法"><a href="#最新版git的安装方法" class="headerlink" title="最新版git的安装方法"></a>最新版git的安装方法</h3><p> 推荐yum update 更新下系统</p>
 <h4 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/10/12/git-install-config/#more">more >></a>
-        
+<a id="more"></a>
+<h4 id="下载git源码"><a href="#下载git源码" class="headerlink" title="下载git源码"></a>下载git源码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget https://github.com/git/git/archive/v2.15.0-rc1.tar.gz</div></pre></td></tr></table></figure>
+<p>更多最新版本可以到 <a href="https://github.com/git/git/releases" target="_blank" rel="external">https://github.com/git/git/releases</a> 查看</p>
+<h4 id="解压缩"><a href="#解压缩" class="headerlink" title="解压缩"></a>解压缩</h4><p>会下载一个 v2.15.0-rc1.tar.gz 文件(如果在下载时不指定文件名称),解压<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">tar -xvf v2.15.0-rc1.tar.gz</div><div class="line">cd v2.15.0-rc1</div></pre></td></tr></table></figure></p>
+<h4 id="编译安装-将其安装在”-usr-local-git”目录下"><a href="#编译安装-将其安装在”-usr-local-git”目录下" class="headerlink" title="编译安装 (将其安装在”/usr/local/git”目录下)"></a>编译安装 (将其安装在”/usr/local/git”目录下)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">make prefix=/usr/local/git all</div><div class="line">sudo make prefix=/usr/local/git install</div></pre></td></tr></table></figure>
+<h4 id="查看git版本"><a href="#查看git版本" class="headerlink" title="查看git版本"></a>查看git版本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">版本 : git --version</div></pre></td></tr></table></figure>
+<p>可能还是1.7,需要将新安装的放入到环境变量中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">查看git的所在目录: whereis git</div></pre></td></tr></table></figure></p>
+<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">vim /etc/profile</div><div class="line">export PATH=/usr/local/git/bin:$PATH</div><div class="line">source /etc/profile</div></pre></td></tr></table></figure>
+<p>使用git –version 查看版本</p>
+<h3 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h3><h4 id="设置用户名和email"><a href="#设置用户名和email" class="headerlink" title="设置用户名和email"></a>设置用户名和email</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;Your Name&quot;</div><div class="line">git config --global user.email &quot;youremail@domain.com&quot;</div></pre></td></tr></table></figure>
+<p>此时，Home目录下会新建一个.gitconfig文件</p>
+<h4 id="SSH-Keys-生成"><a href="#SSH-Keys-生成" class="headerlink" title="SSH Keys 生成"></a>SSH Keys 生成</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;youremail@163.com&quot;</div></pre></td></tr></table></figure>
+<p>连续三次回车,ssh key保存在 ~/.ssh目录下</p>
+<h4 id="git-托管仓库添加key"><a href="#git-托管仓库添加key" class="headerlink" title="git 托管仓库添加key"></a>git 托管仓库添加key</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -211,16 +253,75 @@ var _hmt = _hmt || [];
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/12/git-install-config/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/12/git-install-config/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/11/postgres-replication/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">postgres9.5.7 replication</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -235,175 +336,48 @@ var _hmt = _hmt || [];
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-postgres-replication" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/11/postgres-replication/">postgres9.5.7 replication</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/11/postgres-replication/" class="archive-article-date">
-  	<time datetime="2017-10-11T01:01:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="主机规划"><a href="#主机规划" class="headerlink" title="主机规划"></a>主机规划</h3><ul>
-<li>主库ip: 192.168.1.100</li>
-<li>备库ip: 192.168.1.101</li>
-</ul>
-<h3 id="192-168-1-100-主库的配置"><a href="#192-168-1-100-主库的配置" class="headerlink" title="192.168.1.100 主库的配置"></a>192.168.1.100 主库的配置</h3><ul>
-<li>修改pg_hba.conf，增加replica用户，进行同步。  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">host replication replica 192.168.1.101/32 md5</div></pre></td></tr></table></figure>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/10/11/postgres-replication/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">postgres</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/11/postgres-replication/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#最新版git的安装方法"><span class="toc-number">1.</span> <span class="toc-text">最新版git的安装方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装依赖包"><span class="toc-number">1.1.</span> <span class="toc-text">安装依赖包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#下载git源码"><span class="toc-number">1.2.</span> <span class="toc-text">下载git源码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解压缩"><span class="toc-number">1.3.</span> <span class="toc-text">解压缩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编译安装-将其安装在”-usr-local-git”目录下"><span class="toc-number">1.4.</span> <span class="toc-text">编译安装 (将其安装在”/usr/local/git”目录下)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看git版本"><span class="toc-number">1.5.</span> <span class="toc-text">查看git版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置环境变量"><span class="toc-number">1.6.</span> <span class="toc-text">配置环境变量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置git"><span class="toc-number">2.</span> <span class="toc-text">配置git</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#设置用户名和email"><span class="toc-number">2.1.</span> <span class="toc-text">设置用户名和email</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SSH-Keys-生成"><span class="toc-number">2.2.</span> <span class="toc-text">SSH Keys 生成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-托管仓库添加key"><span class="toc-number">2.3.</span> <span class="toc-text">git 托管仓库添加key</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-postgres-archive" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/10/postgres-archive/">postgres9.5.7 wal archive and Recovery Configuration</a>
-    </h1>
   
 
-        
-        <a href="/2017/10/10/postgres-archive/" class="archive-article-date">
-  	<time datetime="2017-10-10T13:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="wal归档备份"><a href="#wal归档备份" class="headerlink" title="wal归档备份"></a>wal归档备份</h3><ul>
-<li>目录规划<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/mnt2/postgresql_basebak/data #基础备份目录</div><div class="line">/mnt2/postgresql_recover/data #还原目录</div><div class="line">/mnt2/postgresql_increase_basebak/ #每个月基础备份目录</div><div class="line">/mnt2/postgresql_walbak/  #wal日志备份目录</div></pre></td></tr></table></figure>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/10/10/postgres-archive/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">postgres</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/10/postgres-archive/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+  <section id="comments" style="margin: 20px;">
+  <div id="valine" class="valine"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='/Valine.min.js'></script>
+  <script>
+    new Valine({
+      av: AV,
+      el: '.valine' ,
+      app_id: "B8rXoaE8oBYtgwPyeEOUONBG-gzGzoHsz",
+      app_key: "9B2ChNTxJ5cSJl5WmD6qLXEk",
+      placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+    });
+  </script>
+</section>
+
+  
+
+  
+
   
 
 
@@ -427,8 +401,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
